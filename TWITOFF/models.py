@@ -1,4 +1,4 @@
-from flask_sqlalchemy import flask_sqlalchemy
+from flask_sqlalchemy import SQLAlchemy
 
 DB = SQLAlchemy()
 
@@ -10,4 +10,4 @@ class User(DB.Model):
 class Tweet(DB.Model):
     """Tweets we pull"""
     id = DB.Column(DB.BigInteger, primary_key=True)
-    text = DB.Column(DB.Unicode(280))
+    text = DB.Column(DB.Unicode(300))
