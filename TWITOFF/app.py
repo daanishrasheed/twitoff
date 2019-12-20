@@ -1,4 +1,4 @@
-"""COde for app"""
+"""Code for app"""
 from decouple import config
 from flask import Flask, render_template, request
 from .models import DB, User
@@ -42,5 +42,6 @@ def create_app():
         except Exception as e:
             message = "Error adding {}: {}".format(name,e)
             tweets = []
-        return render_template('user.html')
+        return render_template('user.html', title=name, tweets=tweets,
+        message=message)
     return app
