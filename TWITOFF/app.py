@@ -9,6 +9,10 @@ def create_app():
 
     #add config for database
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
+
+    #stop tracking modifications on sqlalchemy config
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
     #have the database know about the app
     DB.init_app(app)
 
