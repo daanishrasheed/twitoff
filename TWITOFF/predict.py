@@ -2,7 +2,7 @@
 import pickle
 import numpy as np
 from sklearn.linear_model import LogisticRegression
-from .model import User
+from .models import User
 from .twitter import BASILICA
 
 def predict_user(user1_name, user2_name, tweet_text, cache=None):
